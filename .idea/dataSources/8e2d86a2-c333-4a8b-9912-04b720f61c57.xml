@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="QueueDB@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.4">
+    <root id="1">
+      <ServerType>standalone</ServerType>
+    </root>
+    <database id="2" parent="1" name="QueueDB">
+      <ObjectId>8</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="4" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="7" parent="1" name="DWDiagnostics">
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="8" parent="1" name="DWConfiguration">
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="9" parent="1" name="DWQueue">
+      <ObjectId>7</ObjectId>
+    </database>
+    <schema id="10" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2018-07-06.14:46:40.777</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="11" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="20" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="21" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="22" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <table id="23" parent="10" name="Current">
+      <ObjectId>1557580587</ObjectId>
+      <CreatedTimestamp>2018-07-05.14:43:45.363</CreatedTimestamp>
+      <ModifiedTimestamp>2018-07-05.14:43:45.867</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="10" name="Queue">
+      <ObjectId>1525580473</ObjectId>
+      <CreatedTimestamp>2018-07-03.23:01:21.850</CreatedTimestamp>
+      <ModifiedTimestamp>2018-07-06.14:46:39.777</ModifiedTimestamp>
+    </table>
+    <column id="25" parent="23" name="CurrentID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="26" parent="23" name="PK_Current">
+      <Position>1</Position>
+      <ColNames>CurrentID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="23" name="PK_Current">
+      <ObjectId>1589580701</ObjectId>
+      <CreatedTimestamp>2018-07-05.14:43:45.867</CreatedTimestamp>
+      <ModifiedTimestamp>2018-07-05.14:43:45.867</ModifiedTimestamp>
+      <ColNames>CurrentID</ColNames>
+      <UnderlyingIndexName>PK_Current</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="24" name="UserID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="24" name="Email">
+      <Position>2</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="30" parent="24" name="Username">
+      <Position>3</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="31" parent="24" name="TextTitle">
+      <Position>4</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="32" parent="24" name="PicDesc">
+      <Position>5</Position>
+      <DataType>nvarchar(1000)|0</DataType>
+    </column>
+    <column id="33" parent="24" name="VidDesc">
+      <Position>6</Position>
+      <DataType>nvarchar(1000)|0</DataType>
+    </column>
+    <column id="34" parent="24" name="ImageB">
+      <Position>7</Position>
+      <DataType>nvarchar(1000)|0</DataType>
+    </column>
+    <column id="35" parent="24" name="ImageC">
+      <Position>8</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="36" parent="24" name="video">
+      <Position>9</Position>
+      <DataType>nvarchar(50)|0</DataType>
+    </column>
+    <column id="37" parent="24" name="colorB">
+      <Position>10</Position>
+      <DataType>nchar(10)|0</DataType>
+    </column>
+    <column id="38" parent="24" name="colorT">
+      <Position>11</Position>
+      <DataType>nchar(10)|0</DataType>
+    </column>
+    <column id="39" parent="24" name="ReservedTime">
+      <Position>12</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="40" parent="24" name="PK_Queue">
+      <Position>1</Position>
+      <ColNames>UserID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="41" parent="24" name="PK_Queue">
+      <ObjectId>1541580530</ObjectId>
+      <CreatedTimestamp>2018-07-03.23:01:22.050</CreatedTimestamp>
+      <ModifiedTimestamp>2018-07-03.23:01:22.050</ModifiedTimestamp>
+      <ColNames>UserID</ColNames>
+      <UnderlyingIndexName>PK_Queue</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
