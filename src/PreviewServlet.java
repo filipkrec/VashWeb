@@ -42,8 +42,6 @@ public class PreviewServlet extends HttpServlet {
         String picDesc = mapa.get("picDesc");
         String vidDesc = mapa.get("vidDesc");
         String username = mapa.get("name");
-        String kod = mapa.get("code");
-        String recoded = mapa.get("rcd");
         String text = mapa.get("text");
         String colorT = mapa.get("colorT");
         String colorB = mapa.get("colorB");
@@ -57,7 +55,6 @@ public class PreviewServlet extends HttpServlet {
         if(video != null){ video = convertVid(video);
         if(video.equals("error")) { errors.add("<h1>Video Error</h1>");}}
         String presentation = mapa.get("present");
-        if (recode(kod) != Integer.parseInt(recoded)) errors.add("<h1>Wrong code!</h1>");
         if (username == null) errors.add("<h1>No username</h1>");
         if (errors.size() == 0) {
             ServletContext context = getServletContext();
@@ -89,14 +86,6 @@ public class PreviewServlet extends HttpServlet {
                 out.println(i);
             }
         }
-    }
-
-    private int recode(String kod) {
-        int rtrn = 0;
-        for (int i = 0; i < kod.length(); i++) {
-            rtrn += (int)kod.charAt(i);
-        }
-        return ((rtrn / 12) * 15 + 123) / 4;
     }
 
     private String convertVid(String vid){

@@ -10,12 +10,14 @@
 <section id="contact" class="container dark second">
     <div class="content">
         <div id="contact-form">
+            <div class="column-half">
+            <form id="mailForm" method="POST" action="MailConfirm">
+            <div id="emailDiv" class="formblock">
+                Email: &nbsp &nbsp <input type="text" name="Email" id="Email" class="txt requiredField">  <br>
+                <input type="button" class="subbutton" name="ValidateButton" ID="ValidateButton" value="Validate">
+            </div>
+            </form>
             <form id="submitForm" method="POST" action="Preview" enctype="multipart/form-data">
-                <div class="column-half">
-                    <div class="formblock">
-                        Email: &nbsp ${email}
-                        <input type="text" style="display:none;" name="rcd" value="${recoded}">
-                    </div>
                     <div class="formblock">
                         Code:&nbsp &nbsp <input type="text" name="code" class="txt2 requiredField"></br>
                     </div>
@@ -86,12 +88,18 @@
         </div>
     </div>
 </section>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
     function title() {
         document.getElementById("title").innerHTML = "Create";
     }
 
     window.onload = title();
+    $(document).on("click", "#ValidateButton", function() { // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
+        $.post("MailConfirm", {Email : document.getElementById("Email").value},function(responseText) {   // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response text...
+            $("#Email").val(responseText);           // Locate HTML DOM element with ID "somediv" and set its text content with the response text.
+        });
+    });
 </script>
 </body>
 </html>

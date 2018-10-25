@@ -10,13 +10,13 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import com.google.gson.*;
 
 @WebServlet(name = "MailConfirm", urlPatterns = {"/MailConfirm"})
 public class MailConfirm extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-            String toEmail = request.getParameter("email");
+            String toEmail = request.getParameter("Email");
             DbConnect db = new DbConnect();
             PrintWriter out = response.getWriter();
             if (!emailCheck(toEmail)) {
@@ -27,17 +27,14 @@ public class MailConfirm extends HttpServlet {
             }
             else {
                 String kod = code();
-                response.setContentType("text/html;charset=UTF-8");
                 String subject = "VashWEB Validation Code";
                 String user = "yourmail@gmail.com"; //your email sender gmail account
                 String pass = "yourpass"; //matching password
-                apps.SendMail.send(toEmail,subject, kod, user, pass);
-                request.setAttribute("email",toEmail);
-                request.setAttribute("recoded",recode(kod));
-                RequestDispatcher rd = request.getRequestDispatcher("Create.jsp");
-                rd.forward(request,response);
+                apps.SendMail.send(toEmail, subject, kod, user, pass);
+                response.setContentType("text/plain");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(toEmail);
             }
-
     }
 
     private String code() {

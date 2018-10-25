@@ -20,14 +20,15 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 5.0.01" level="application_server_libraries" />
-    <orderEntry type="library" name="javax.mail" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 5.0.02 - JMS: Java Message Service" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 5.0.02 - EJB" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 5.0.02 - WebSocket" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 5.0.01 - JSF" level="application_server_libraries" />
     <orderEntry type="library" name="commons-fileupload-1.3" level="project" />
     <orderEntry type="library" name="commons-io-2" level="project" />
-    <orderEntry type="library" name="adaptive" level="project" />
-    <orderEntry type="library" name="mssql-jdbc-6.4.0.jre7" level="project" />
+    <orderEntry type="library" name="VashWebLibs" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
+    <orderEntry type="library" name="jQuery UI-1.10.2" level="application" />
   </component>
 </module>
